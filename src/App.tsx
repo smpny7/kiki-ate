@@ -51,18 +51,9 @@ function App() {
     return (
         <div>
             <Navbar appearance="inverse">
-                <Navbar.Brand>KIKI-ATE</Navbar.Brand>
+                <Navbar.Brand>聴きあて</Navbar.Brand>
             </Navbar>
             <ReactJkMusicPlayer {...playerOptions} />
-            <button
-                className="fixed top-0 right-0 z-20"
-                onClick={() => {
-                    if (audioInstance && audioInstance.destroy)
-                        audioInstance.destroy()
-                }}
-            >
-                destroy player
-            </button>
             <Container>
                 <List className="pb-20" hover>
                     {data.map((item, index) => (
